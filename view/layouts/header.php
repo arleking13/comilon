@@ -12,14 +12,14 @@
   <title>Mis ofertas</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php if(isset($url)){ echo $url;} ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/business-casual.min.css" rel="stylesheet">
+  <link href="<?php if(isset($url)){ echo $url;} ?>css/business-casual.min.css" rel="stylesheet">
 
 </head>
 
@@ -40,18 +40,21 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.php">Bienvenidos
-              <span class="sr-only">(current)</span>
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>index.php">Bienvenidos
+              <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">catalogo de platos</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/catalogo.php">catalogo de platos
+            <?php if($current == 'catalogo'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.html">Generar menu</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/menu.php">Generar menu
+            <?php if($current == 'menu'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="store.html">Solicitar pedido</a>
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/pedido.php">Solicitar pedido
+            <?php if($current == 'pedido'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
         </ul>
       </div>

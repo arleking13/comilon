@@ -1,4 +1,6 @@
-<?php include_once 'view/layouts/header.php'; ?>
+<?php 
+  $current = "bienvenidos";
+  include_once 'view/layouts/header.php'; ?>
 
   <section class="page-section clearfix">
     <div class="container">
