@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mis ofertas</title>
+  <title>SoftFood</title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php if(isset($url)){ echo $url;} ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Proyect for duoc uc</span>
-    <span class="site-heading-lower">Mis ofertas</span>
+    <span class="site-heading-lower">SoftFood</span>
   </h1>
 
   <!-- Navigation -->
