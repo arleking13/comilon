@@ -24,18 +24,27 @@
           <!-- Pasos del flujo formulario -->
           <div class="step_1">
 
-            <Label>Modalidad</Label>
-            <!-- Default unchecked -->
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
-              <label class="custom-control-label" for="defaultUnchecked">Semanal</label>
-            </div>
+            <form method="post" action="">
+              <Label>Modalidad</Label>
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                <label class="custom-control-label" for="defaultUnchecked">Semanal</label>
+              </div>
 
-            <!-- Default checked -->
-            <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
-              <label class="custom-control-label" for="defaultChecked">Mensual</label>
-            </div>
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                <label class="custom-control-label" for="defaultChecked">Mensual</label>
+              </div>
+
+              <div class="semanal" display="none">
+                <label for=""></label>
+                <input type="text">
+              </div>
+
+
+            </form>
 
           </div>
 
@@ -47,6 +56,7 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
+
       </div>
     </div>
   </div>
@@ -113,5 +123,20 @@
       </div>
     </div>
   </section> -->
+
+  <script>
+    $(document).ready(function(){
+
+    });
+
+    $("#modalidad-semanal").click(function () {
+      $('#semanal').fadeIn('fast');
+    });
+
+    $('#modalidad-mensual').click(function() {
+      $('#mensual').fadeIn('fast');
+    })
+    
+  </script>
 
 <?php include_once 'layouts/footer.php'; ?>
