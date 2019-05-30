@@ -2,6 +2,13 @@
   $current = "bienvenidos";
   include_once 'view/layouts/header.php'; ?>
 
+  <style>
+    .marcas{
+      width: 100%;
+      height: 150px;
+    }
+  </style>
+
   <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
@@ -31,7 +38,14 @@
               <span class="section-heading-upper">Productos</span>
               <span class="section-heading-lower">Prefiere nuestras marcas</span>
             </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+            <!-- imagenes de marcas -->
+            <div class="marcas">
+              <img src="img/marcas/burgerking.jpg" alt="">
+              <img src="img/marcas/mcdonalds.jpg" alt="">
+              <img src="img/marcas/pizzahuts.jpg" alt="">
+              <img src="img/marcas/starbucks.jpg" alt=""> 
+            </div>
+            
           </div>
         </div>
       </div>
