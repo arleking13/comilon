@@ -2,18 +2,18 @@
 $url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
     switch ($url) {
-        case 'localhost/softfood/index.php':
+        case 'localhost/comilon/index.php':
             $current = 'bienvenido';
         break;
-        case 'localhost/softfood/view/catalogo.php':
+        case 'localhost/comilon/view/catalogo.php':
             $current = 'catalogo';
             $url = '../';
         break;
-        case 'localhost/softfood/view/menu.php':
+        case 'localhost/comilon/view/menu.php':
             $current = 'menu';
             $url = '../';
         break;
-        case 'localhost/softfood/view/pedido.php':
+        case 'localhost/comilon/view/pedido.php':
             $current = 'pedido';
             $url = '../';
         break;

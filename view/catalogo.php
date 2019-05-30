@@ -8,7 +8,7 @@
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner text-center rounded">
               <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Softfood</span>
+                <span class="section-heading-upper">Comilon</span>
                 <span class="section-heading-lower">Catalogo</span>
               </h2>
               <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
