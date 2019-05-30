@@ -13,7 +13,7 @@ $url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
             $current = 'menu';
             $url = '../';
         break;
-        case 'localhost/softfooda/view/pedido.php':
+        case 'localhost/softfood/view/pedido.php':
             $current = 'pedido';
             $url = '../';
         break;
