@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,14 +31,12 @@
   <link href="<?php if(isset($url)){ echo $url;} ?>css/style.css" rel="stylesheet">
 
 </head>
-
 <body>
-
+  
   <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">Proyect for duoc uc</span>
+    <span class="site-heading-upper text-primary mb-3">Proyecto Duoc UC</span>
     <span class="site-heading-lower">Comilon</span>
   </h1>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
@@ -50,6 +48,11 @@
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>index.php">Bienvenidos
+              <?php if($current =='bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
+            </a>
+          </li>
+          <li class="nav-item  px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>index.php">Generar Pedido
               <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
             </a>
           </li>
@@ -65,6 +68,17 @@
             <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/pedido.php">Solicitar pedido
             <?php if($current == 'pedido'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
+          <li class="nav-item px-lg-4">
+           <a  class="float-right text-white">Bienvenido: <?php if(isset($_SESSION['nombre'])){echo $_SESSION['nombre'];} else{echo "Usuario";}?></a>
+          </li>
+          <li class="nav-item px-lg-4">
+           <a  href="login.php" class="float-right text-white">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item px-lg-4">
+           <a  href="controller/LoginController.php?cerrarSesion=true" class="float-right text-white">Cerrar Session</a>
+          </li>
+          
+        
         </ul>
       </div>
     </div>

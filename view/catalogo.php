@@ -1,6 +1,8 @@
 <?php
     include_once 'route.php' ;
-    include_once 'layouts/header.php'; ?>
+    include_once 'layouts/header.php'; 
+    include_once '../controller/PlatosController.php';  include_once('../db/database.php'); ?>?>
+    
 
     <section class="page-section cta">
       <div class="container">
@@ -16,10 +18,14 @@
                   Platos
                   <span class="ml-auto">Precio</span>
                 </li>
+
+                <?php $query = "exec spmostrar_platos";  $consulta= sqlsrv_query($con,$query);  ?> 
+                <?php while($resultado = sqlsrv_fetch_array($consulta,SQLSRV_FETCH_ASSOC)){ ?>
                 <li class="list-unstyled-item list-hours-item d-flex">
-                  Cazuela
-                  <span class="ml-auto">$4.000</span>
+                  <?php echo $resultado['nombre']; ?>
+                  <span class="ml-auto"><?php echo $resultado['precio']; ?></span>
                 </li>
+                <?php } ?>
               </ul>
               <p class="address mb-5">
                 <em>
