@@ -52,6 +52,11 @@
             </a>
           </li>
           <li class="nav-item  px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/RegistroCliente.php">Registrar Cliente
+              <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
+            </a>
+          </li>
+          <li class="nav-item  px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>index.php">Generar Pedido
               <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
             </a>
