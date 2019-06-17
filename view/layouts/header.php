@@ -66,6 +66,9 @@
             <?php if($current == 'catalogo'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
           <li class="nav-item px-lg-4">
+           <a  href="http://localhost/comilon/servicio.php" class="float-right text-white">Platos de proveedor externo</a>
+          </li>
+          <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/menu.php">Generar menu
             <?php if($current == 'menu'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>

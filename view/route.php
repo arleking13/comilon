@@ -17,6 +17,11 @@ $url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
             $current = 'pedido';
             $url = '../';
         break;
+
+        case 'localhost/comilon/view/RegistroCliente.php':
+        $current = 'registro';
+        $url = '../';
+        break;
         
         default:
             echo "Esta siendo manipulado";
