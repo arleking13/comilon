@@ -52,12 +52,17 @@
             </a>
           </li>
           <li class="nav-item  px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/RegistroCliente.php">Registrar Cliente
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/RegistroCliente.php"><?php if(!isset($_SESSION['nombre'])){ echo "Registrarse";} ?>
               <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
             </a>
           </li>
           <li class="nav-item  px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>index.php">Generar Pedido
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/registrarpedido.php"><?php if(!isset($_SESSION['nombre'])){ echo "Generar Pedido";} ?>
+              <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
+            </a>
+          </li>
+          <li class="nav-item  px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/registrarPedidoCliente.php"><?php if(isset($_SESSION['nombre'])){ echo "Generar Pedido";} ?>
               <?php if($current == 'bienvenidos'){ echo '<span class="sr-only">(current)</span>'; } ?>
             </a>
           </li>
@@ -73,15 +78,15 @@
             <?php if($current == 'menu'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="<?php if(isset($url)){ echo $url;} ?>view/pedido.php">Solicitar pedido
-            <?php if($current == 'pedido'){ echo '<span class="sr-only">(current)</span>'; } ?></a>
+           <a  class="float-right text-white"><?php if(isset($_SESSION['nombre'])){echo "Bienvenido: " . $_SESSION['nombre'];}?></a>
           </li>
           <li class="nav-item px-lg-4">
-           <a  class="float-right text-white">Bienvenido: <?php if(isset($_SESSION['nombre'])){echo $_SESSION['nombre'];} else{echo "Usuario";}?></a>
+           <a  href="login.php" class="float-right text-white"><?php if(!isset($_SESSION['nombre'])){ echo "Iniciar Sesion";} ?></a>
           </li>
           <li class="nav-item px-lg-4">
-           <a  href="login.php" class="float-right text-white">Iniciar Sesion</a>
+           <a  href="controller/boletaClienteController.php?verPedido=true" class="float-right text-white"><?php if(isset($_SESSION['nombre'])){ echo "Ver estado Pedido";} ?></a>
           </li>
+          
           <li class="nav-item px-lg-4">
            <a  href="controller/LoginController.php?cerrarSesion=true" class="float-right text-white">Cerrar Session</a>
           </li>

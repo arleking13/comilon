@@ -1,7 +1,7 @@
 <?php
     include_once 'route.php' ;
     include_once 'layouts/header.php'; 
-    include_once '../controller/PlatosController.php';  include_once('../db/database.php'); ?>?>
+    include_once '../controller/PlatosController.php';  include_once('../db/database.php'); ?>
     
 
     <section class="page-section cta">

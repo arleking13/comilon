@@ -16,6 +16,7 @@ if ($_POST['sbtLogin'])
         $_SESSION['nombre'] = $prueba['nombre'];
         $_SESSION['apellido'] = $prueba['apellidos'];
         $_SESSION['perfil'] = $prueba['idPerfil'];
+        $_SESSION['direccion'] = $prueba['direccion'];
         header("Location:http://".$_SERVER['HTTP_HOST'].'/comilon');
     }
     else

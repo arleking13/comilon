@@ -8,6 +8,4 @@ function Registrar($rut,$nombre,$apellido,$direccion,$telefono,$mail,$usuario,$p
     return $consulta;
 }
 
-
-
 ?>
