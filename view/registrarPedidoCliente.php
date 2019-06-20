@@ -25,6 +25,27 @@
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="../vendor/datetime/js/datetimepicker.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+<script type="text/javascript">
+  function validarFormulario(){
+    jQuery.validator.messages.required = 'Esta campo es obligatorio.';
+    jQuery.validator.messages.number = 'Esta campo debe ser num&eacute;rico.';
+    jQuery.validator.messages.email = 'La direcci&oacute;n de correo es incorrecta.';
+    $("#sbtPedido").validate();
+  }
+  $(document).ready(function(){
+    validarFormulario();
+  });
+</script>
+
+<style type="text/css">
+  .error {color: #f00;}
+</style>
+<!-- jquery validate -->
+
+
 <br>
 <h1>Realizar Compra Usuario : <?php echo $_SESSION['nombre']; ?></h1>
 <form class="form-horizontal" id="sbtPedido" name="sbtPedido" method="POST" action="../controller/boletaClienteController.php">
@@ -51,7 +72,7 @@
     </div>               
                             
     <div class="form-group">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Tipo De Retiro:</label>
+      <label class="mr-sm-2 required" for="inlineFormCustomSelect">Tipo De Retiro:</label>
       <select class="custom-select mr-sm-4" id="sltRetiro" name="sltRetiro">
         <option value ="0" selected>Seleccione</option>
         <option value="1">Local</option>
@@ -61,7 +82,7 @@
                                 
     <div class="form-group">
     <label class="mr-sm-2 control-label" for="">Indique hora de retiro o despacho(15 Minutos desde la transaccion)</label>
-    <input size="30" type="text" id="txtFecha" name="txtFecha"  class="form_datetime">
+    <input size="30" type="text" id="txtFecha" name="txtFecha"  class="form_datetime required">
     </div>
     <div class="form-group"> <!-- Submit Button -->
         <button type="submit" value="sbtPedido" id="sbtPedido" name="sbtPedido" class="btn btn-primary btn*lg">Realizar Pedido</button>
